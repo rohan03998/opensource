@@ -30,3 +30,40 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+document.getElementById('login-btn').addEventListener('click', function() {
+    const role = document.getElementById('role').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Placeholder for authentication logic
+    // In a real application, you'd verify with the backend
+
+    if (role === 'admin') {
+        // Load Admin interface
+        loadAdminInterface();
+    } else if (role === 'co-admin') {
+        // Load Co-admin interface
+        loadCoAdminInterface();
+    } else if (role === 'student') {
+        // Load Student interface
+        loadStudentInterface();
+    } else {
+        alert('Please select a role and enter your credentials.');
+    }
+});
+
+function loadAdminInterface() {
+    // Load Admin-specific content (tabs for Co-admin Management and Student Management)
+    alert('Welcome Admin!'); // Placeholder for navigation
+}
+
+function loadCoAdminInterface() {
+    // Load Co-admin-specific content (tabs for Student Management and Requests)
+    alert('Welcome Co-admin!'); // Placeholder for navigation
+}
+
+function loadStudentInterface() {
+    // Load Student-specific content (tabs for Request Permission and Request History)
+    alert('Welcome Student!'); // Placeholder for navigation
+}
